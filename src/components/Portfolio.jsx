@@ -9,6 +9,7 @@ import CVSection from "./CVSection";
 import ProjectsSection from "./ProjectsSection";
 import CertificatesSection from "./CertificatesSection";
 import Sidebar from "./SideBar";
+import Footer from "./Footer";
 import { personalInfo, projects } from "../data/data";
 
 const Portfolio = () => {
@@ -73,6 +74,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
