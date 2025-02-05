@@ -5,7 +5,7 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 const CVSection = () => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const pdfFile = "public/CV_Marc_Serrano.pdf";
+  const pdfFile = "public/CV_SerranoMarc.pdf";
 
   return (
     <div className="animate-fade-in h-full">

@@ -8,60 +8,13 @@ import HomeSection from "./HomeSection";
 import CVSection from "./CVSection";
 import ProjectsSection from "./ProjectsSection";
 import CertificatesSection from "./CertificatesSection";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar";
+import Footer from "./Footer";
+import { personalInfo, projects } from "../data/data";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isLoading, setIsLoading] = useState(true);
-
-  const personalInfo = {
-    name: "Marc Serrano",
-    title: "Software Engineer",
-    email: "marcserranog@gmail.com",
-    phone: "+34 665 537 096",
-    location: "Barcelona, Spain",
-    linkedin: "https://www.linkedin.com/in/marcserranog",
-    github: "https://github.com/marcserranog",
-  };
-
-  const projects = [
-    {
-      name: "Haircurt Board",
-      description:
-        "Platform for managing aesthetic services with client management, reservations, and invoicing",
-      technologies: [
-        "Java",
-        "Spring Framework",
-        "MySQL",
-        "Angular",
-        "TypeScript",
-      ],
-    },
-    {
-      name: "Frutikas",
-      description:
-        "Subscription-based web platform for monthly product delivery",
-      technologies: [
-        "React",
-        "JavaScript",
-        "CSS",
-        "Java",
-        "Spring Framework",
-        "MySQL",
-      ],
-    },
-    {
-      name: "Transports TCM",
-      description:
-        "It is a project of the university, which consists of a company of transport of frozen food, it has to develop the calculations that makes the trucks depending on the price, the distance that it travels looking for the most optimal solution. ",
-      technologies: [
-        "Java",
-        "Spring Framework",
-        "MySQL",
-      ],
-      url: "https://github.com/marcserranog/transports-tcm",
-    },
-  ];
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
@@ -105,12 +58,9 @@ const Portfolio = () => {
         </div>
       </header>
 
-      {/* Main Layout */}
       <div className="flex-1 flex overflow-hidden pt-20">
-        {/* Sidebar */}
         <Sidebar personalInfo={personalInfo} setActiveSection={setActiveSection} />
 
-        {/* Main Content */}
         <div className="flex-1 p-8 overflow-auto">
           <div className="max-w-4xl mx-auto">
             {activeSection === "home" && (
@@ -124,6 +74,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
