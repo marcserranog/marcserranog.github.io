@@ -10,7 +10,7 @@ const Sidebar = ({ personalInfo, setActiveSection }) => {
         className="group relative w-32 h-32 rounded-full overflow-hidden mb-6 transform transition-transform hover:scale-105 ring-2 ring-blue-500 ring-offset-2"
       >
         <img
-          src="public/Foto_cv.jpeg"
+          src="Foto_cv.jpeg"
           alt="Profile"
           className="w-full h-full object-cover transition-transform group-hover:scale-110"
         />
