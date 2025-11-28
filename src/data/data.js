@@ -23,7 +23,7 @@ export const personalInfo = {
         "Webpack",
         "Jest",
       ],
-      url: "https://github.com/marcserranog/business-case-frontend-marc-serrano",
+      url: "https://marcserranog.github.io/business-case-frontend-marc-serrano/",
     },
     {
       name: "HairBoard",
