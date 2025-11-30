@@ -4,7 +4,7 @@ import HomeSection from "./HomeSection";
 import CVSection from "./CVSection";
 import ProjectsSection from "./ProjectsSection";
 import CertificatesSection from "./CertificatesSection";
-import Sidebar from "./SideBar";
+import SideBar from "./Sidebar";
 import Footer from "./Footer";
 import { personalInfo, projects } from "../data/data";
 
@@ -50,7 +50,7 @@ const Portfolio = () => {
         </nav>
       </header>
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden pt-16">
-        <Sidebar personalInfo={personalInfo} setActiveSection={setActiveSection} />
+        <SideBar personalInfo={personalInfo} setActiveSection={setActiveSection} />
         <div className="flex-1 p-4 md:p-8 overflow-auto">
           <div className="max-w-4xl mx-auto">
             {activeSection === "home" && <HomeSection personalInfo={personalInfo} />}
