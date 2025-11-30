@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, MapPin, Linkedin, Github, Briefcase } from "lucide-react";
 
-const Sidebar = ({ personalInfo, setActiveSection }) => {
+const SideBar = ({ personalInfo, setActiveSection }) => {
   return (
     <aside className="w-64 bg-white shadow-xl flex flex-col items-center px-6 py-8 space-y-6 ml-10">
       {/* Profile Image Button */}
@@ -60,4 +60,4 @@ const Sidebar = ({ personalInfo, setActiveSection }) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
