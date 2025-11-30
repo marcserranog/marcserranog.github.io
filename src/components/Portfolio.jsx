@@ -4,7 +4,7 @@ import HomeSection from "./HomeSection";
 import CVSection from "./CVSection";
 import ProjectsSection from "./ProjectsSection";
 import CertificatesSection from "./CertificatesSection";
-import SideBar from "./SideBar";
+import SideBar from "./Sidebar";
 import Footer from "./Footer";
 import { personalInfo, projects } from "../data/data";
 
