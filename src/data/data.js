@@ -26,6 +26,21 @@ export const personalInfo = {
       url: "https://marcserranog.github.io/business-case-frontend-marc-serrano/",
     },
     {
+      name: "Cheesy Burger Website",
+      description:
+        "Cheesy Burger is a small, family-style burger restaurant website built to showcase the menu, location, brand story, and a playful join-the-team experience. It focuses on fast performance, a custom floating header, a video/image background, and an interactive menu with filters and quantity controls.",
+      technologies: [
+        "Astro",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+        "CSS Modules",
+        "HTML5",
+        "GitHub Pages"
+      ],
+      url: "https://marcserranog.github.io/cheesy-burger/"
+    },
+    {
       name: "HairBoard",
       description:
         "This was my final degree project at university. A platform for managing aesthetic services. An administrator controls clients, bookings and invoicing, improving efficiency and productivity by automating processes.",
