@@ -11,8 +11,7 @@ const HomeSection = () => (
   <div className="space-y-10 animate-fade-in">
     <div className="bg-white rounded-2xl shadow-xl p-8">
       {/* Intro */}
-      <section className="animate-slide-up flex gap-4">
-        <Sparkles className="w-7 h-7 text-blue-500 mt-1" />
+      <section className="animate-slide-up flex gap-[16px]">
         <div>
           <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             ¡Hola! 👋
@@ -29,25 +28,33 @@ const HomeSection = () => (
       </section>
 
       {/* Work */}
-      <section className="mt-10 animate-slide-up delay-100 flex gap-4">
-        <Brain className="w-7 h-7 text-blue-500 mt-1" />
+      <section className="mt-[40px] animate-slide-up delay-100 flex gap-[16px]">
+        <Brain className="w-[52px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
             What I work on
           </h2>
 
           <p className="text-gray-600 leading-relaxed">
-            At <strong>Imbee</strong>, I work on{" "}
-            <strong>AI-powered conversational platforms</strong>, building
-            backend services that allow users and chatbots to communicate in
-            real time. My focus is on designing{" "}
+            At{" "}
+            <a
+              href="https://imbee.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              Imbee
+            </a>
+            , I work on <strong>AI-powered conversational platforms</strong>,
+            building backend services that allow users and chatbots to
+            communicate in real time. My focus is on designing{" "}
             <strong>scalable microservices</strong> using <strong>Go</strong>{" "}
             and <strong>Python</strong>, supported by technologies like{" "}
             <strong>Docker</strong>, <strong>RabbitMQ</strong>,{" "}
             <strong>Redis</strong>, and real-time communication protocols.
           </p>
 
-          <p className="text-gray-600 leading-relaxed mt-4">
+          <p className="text-gray-600 leading-relaxed mt-[16px]">
             A big part of my work focuses on bridging complex backend systems
             with a visual, cloud-style management interface used to configure
             conversational AI solutions. I help build the backend logic that
@@ -59,8 +66,8 @@ const HomeSection = () => (
       </section>
 
       {/* Fullstack */}
-      <section className="mt-10 animate-slide-up delay-300 flex gap-4">
-        <Monitor className="w-7 h-7 text-blue-500 mt-1" />
+      <section className="mt-[40px] animate-slide-up delay-300 flex gap-[16px]">
+        <Monitor className="w-[52px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
             Full-stack perspective
@@ -76,8 +83,8 @@ const HomeSection = () => (
       </section>
 
       {/* Personal */}
-      <section className="mt-10 animate-slide-up delay-400 flex gap-4">
-        <User className="w-7 h-7 text-blue-500 mt-1" />
+      <section className="mt-[40px] animate-slide-up delay-400 flex gap-[16px]">
+        <User className="w-[52px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
             Beyond work
@@ -93,8 +100,8 @@ const HomeSection = () => (
       </section>
 
       {/* CTA */}
-      <section className="mt-10 animate-slide-up delay-500 flex gap-4">
-        <ArrowRight className="w-7 h-7 text-blue-500 mt-1" />
+      <section className="mt-[40px] animate-slide-up delay-500 flex gap-[16px]">
+        <ArrowRight className="w-[48px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
             Let’s connect
