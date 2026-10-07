@@ -1,7 +1,5 @@
 import {
-  Sparkles,
   Brain,
-  Layers,
   Monitor,
   User,
   ArrowRight,
@@ -17,12 +15,11 @@ const HomeSection = () => (
             ¡Hola! 👋
           </h1>
           <p className="text-gray-600 leading-relaxed">
-            I'm a <strong>Software developer</strong> specializing in AI,
-            backend systems, and full-stack development. My top technologies are{" "}
-            <strong>Go</strong> and <strong>Python</strong> for the backend, and{" "}
-            <strong>TypeScript</strong>
-            and React for the frontend. I'm always striving to learn and work
-            hard to achieve the best results.
+            I'm a <strong>Backend Software Engineer</strong> with 4 years of
+            experience building production software in <strong>Java</strong>,{" "}
+            <strong>Go</strong>, and <strong>Python</strong>. I focus on
+            backend services, APIs, system integration, and building software
+            that is reliable and easy to evolve.
           </p>
         </div>
       </section>
@@ -36,31 +33,30 @@ const HomeSection = () => (
           </h2>
 
           <p className="text-gray-600 leading-relaxed">
-            At{" "}
+            Today, at <strong>Zara Home (Inditex)</strong>, I develop{" "}
+            <strong>Java/Spring backend services</strong> and integrate APIs
+            across multiple services and databases. I work within an
+            established <strong>Domain-Driven Design</strong> and{" "}
+            <strong>hexagonal architecture</strong>, investigating technical
+            problems, evolving APIs safely, and preserving compatibility with
+            existing consumers.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mt-[16px]">
+            Previously, at{" "}
             <a
-              href="https://imbee.me"
+              href="https://www.linkedin.com/company/imbee/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-blue-600 hover:underline"
             >
               Imbee
             </a>
-            , I work on <strong>AI-powered conversational platforms</strong>,
-            building backend services that allow users and chatbots to
-            communicate in real time. My focus is on designing{" "}
-            <strong>scalable microservices</strong> using <strong>Go</strong>{" "}
-            and <strong>Python</strong>, supported by technologies like{" "}
-            <strong>Docker</strong>, <strong>RabbitMQ</strong>,{" "}
-            <strong>Redis</strong>, and real-time communication protocols.
-          </p>
-
-          <p className="text-gray-600 leading-relaxed mt-[16px]">
-            A big part of my work focuses on bridging complex backend systems
-            with a visual, cloud-style management interface used to configure
-            conversational AI solutions. I help build the backend logic that
-            powers features like agent connections, conversational flows, and
-            step-based workflows, while ensuring everything is exposed in a way
-            that feels clear and intuitive to the end user.
+            , I built and maintained <strong>Go</strong> and{" "}
+            <strong>Python</strong> backend microservices for an AI and
+            chatbot platform used in production. I also created a custom step
+            that enabled interactive experiences inside bot workflows, such as
+            forms and loading states, with frontend and backend integration.
           </p>
         </div>
       </section>
@@ -73,11 +69,12 @@ const HomeSection = () => (
             Full-stack perspective
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            Alongside backend development, I actively work on the frontend using
-            <strong> React</strong>, <strong>JavaScript</strong>, and{" "}
-            <strong>TypeScript</strong>. This allows me to translate complex
-            backend logic into clean, usable interfaces and to collaborate
-            effectively across product, design, and engineering teams.
+            My core focus is backend engineering, but I also contribute to
+            frontend products with <strong>React</strong>,{" "}
+            <strong>TypeScript</strong>, and <strong>JavaScript</strong>. This
+            full-stack perspective helps me understand the complete product
+            lifecycle and collaborate effectively across engineering, product,
+            and design.
           </p>
         </div>
       </section>
@@ -87,14 +84,14 @@ const HomeSection = () => (
         <User className="w-[52px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
-            Beyond work
+            Engineering approach
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            Outside of work, I enjoy staying active through sports and outdoor
-            activities like paddle tennis and cycling. I’m especially drawn to
-            the sea and water sports such as diving and surfing, and I like
-            spending time on photography, playing the guitar, and personal side
-            projects.
+            I value clean code, clear APIs, backwards compatibility, automated
+            testing, and pragmatic technical decisions. I enjoy understanding
+            systems deeply, finding the root cause of problems, and turning
+            complex requirements into software that is reliable and easy to
+            evolve.
           </p>
         </div>
       </section>
@@ -104,14 +101,12 @@ const HomeSection = () => (
         <ArrowRight className="w-[48px] h-[22px] mt-[4px] text-blue-500 stroke-[2.4]" />
         <div>
           <h2 className="text-xl font-semibold mb-2 text-gray-800">
-            Let’s connect
+            Let's connect
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            If you’re interested in <strong>AI platforms</strong>,{" "}
-            <strong>backend systems</strong>, or{" "}
-            <strong>full-stack development</strong>, feel free to reach out on
-            LinkedIn or explore my work here. I’m always open to new
-            conversations.
+            If you are looking for a backend engineer with experience in{" "}
+            <strong>Java, Go, Python, and microservices</strong>, feel free to
+            reach out on LinkedIn or explore my work here.
           </p>
         </div>
       </section>

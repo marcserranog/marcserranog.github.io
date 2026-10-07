@@ -11,12 +11,12 @@ const CVSection = () => {
             download="CV_MarcSerrano.pdf"
             className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
           >
-            Download CV
+            Descargar CV
           </a>
         </div>
       </div>
 
-      <div className="h-[800px] bg-white rounded-2xl shadow-xl p-4 overflow-hidden">
+      <div className="h-[min(800px,calc(100vh-10rem))] min-h-[480px] bg-white rounded-2xl shadow-xl p-2 sm:p-4 overflow-hidden">
         <iframe
           src={pdfFile}
           title="Marc Serrano CV"
