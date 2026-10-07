@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Brain, Monitor, User } from "lucide-react";
-import { FaJava, FaPython, FaReact } from "react-icons/fa";
+import { FaJava, FaPython } from "react-icons/fa";
 import {
   SiAmazonwebservices,
   SiDocker,
@@ -8,21 +8,28 @@ import {
   SiRabbitmq,
   SiRedis,
   SiSpringboot,
-  SiTypescript,
 } from "react-icons/si";
 
 const rotatingPhrases = [
   "Building backend services.",
-  "Working with APIs and real-world requirements.",
+  "Designing APIs with care.",
+  "Working with Java, Go and Python.",
   "Making software easier to evolve.",
+];
+
+const greetings = [
+  { text: "¡Hola!", language: "Spanish" },
+  { text: "Hello!", language: "English" },
+  { text: "Hallo!", language: "German" },
+  { text: "Bonjour!", language: "French" },
+  { text: "Ciao!", language: "Italian" },
+  { text: "こんにちは!", language: "Japanese" },
 ];
 
 const coreSkills = [
   { name: "Java", icon: FaJava, color: "text-red-500" },
   { name: "Go", icon: SiGo, color: "text-cyan-500" },
   { name: "Python", icon: FaPython, color: "text-yellow-500" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
-  { name: "React", icon: FaReact, color: "text-sky-500" },
   { name: "Spring Boot", icon: SiSpringboot, color: "text-green-600" },
   { name: "Docker", icon: SiDocker, color: "text-blue-600" },
   { name: "AWS", icon: SiAmazonwebservices, color: "text-orange-500" },
@@ -32,10 +39,12 @@ const coreSkills = [
 
 const HomeSection = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
+  const [greetingIndex, setGreetingIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setPhraseIndex((currentIndex) => (currentIndex + 1) % rotatingPhrases.length);
+      setGreetingIndex((currentIndex) => (currentIndex + 1) % greetings.length);
     }, 3200);
 
     return () => window.clearInterval(intervalId);
@@ -45,8 +54,12 @@ const HomeSection = () => {
     <div className="space-y-10 animate-fade-in">
       <div className="bg-white rounded-2xl shadow-xl p-8">
         <section className="animate-slide-up">
-          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-            ¡Hola!
+          <h1
+            className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"
+            aria-live="polite"
+            aria-label={`${greetings[greetingIndex].text} in ${greetings[greetingIndex].language}`}
+          >
+            {greetings[greetingIndex].text}
           </h1>
           <p className="text-gray-600 leading-relaxed">
             I'm a <strong>Backend Software Engineer</strong> with 4 years of
@@ -80,7 +93,18 @@ const HomeSection = () => {
             </h2>
 
             <p className="text-gray-600 leading-relaxed">
-              Today, at <strong>Zara Home (Inditex)</strong>, I develop{" "}
+              Today, at{" "}
+              <a
+                href="https://www.zarahome.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="employer-link"
+                aria-label="Zara Home official website"
+              >
+                <span className="employer-wordmark">ZARA HOME</span>
+                <span className="employer-company">Inditex</span>
+              </a>
+              , I develop{" "}
               <strong>Java/Spring backend services</strong> and integrate APIs
               across multiple services and databases. I work within an
               established <strong>Domain-Driven Design</strong> and{" "}
