@@ -12,6 +12,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isLoading, setIsLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
@@ -27,17 +28,42 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-20 p-4 flex items-center justify-between md:px-6">
-        <h1 className="text-lg md:text-xl font-semibold text-gray-800">Marc Serrano</h1>
-        <button
-          className="md:hidden p-2 rounded-lg hover:bg-blue-50"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={menuOpen}
-        >
-          <Menu size={24} />
-        </button>
-        <nav className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-white md:bg-transparent p-4 md:p-0 space-y-2 md:space-y-0 md:space-x-6 shadow-md md:shadow-none`}>
+      <header className="site-header fixed top-0 left-0 right-0 z-20">
+        <div className="site-header-inner">
+          <button
+            className="site-brand"
+            onClick={() => {
+              setActiveSection("home");
+              setMenuOpen(false);
+              setProfileOpen(false);
+            }}
+            aria-label="Volver al inicio"
+          >
+            <span className="site-brand-mark">MS</span>
+            <span>
+              <strong>Marc Serrano</strong>
+              <small>Backend Software Engineer</small>
+            </span>
+          </button>
+        <div className="mobile-header-actions md:hidden">
+          <button
+            className={`mobile-profile-toggle ${profileOpen ? "is-active" : ""}`}
+            onClick={() => setProfileOpen(!profileOpen)}
+            aria-label={profileOpen ? "Ocultar presentación" : "Mostrar presentación"}
+            aria-expanded={profileOpen}
+          >
+            <img src="/Foto_cv.png" alt="" />
+          </button>
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+        <nav className={`site-nav ${menuOpen ? "is-open" : ""}`}>
           {[{ id: "cv", icon: FileText, label: "CV" },
             { id: "certificates", icon: Award, label: "Certificates" },
             { id: "projects", icon: FolderGit2, label: "Projects" }].map(({ id, icon: Icon, label }) => (
@@ -47,8 +73,9 @@ const Portfolio = () => {
                 setActiveSection(id);
                 setMenuOpen(false);
               }}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                activeSection === id ? "bg-blue-500 text-white shadow-md" : "hover:bg-blue-50 text-gray-800"
+              aria-current={activeSection === id ? "page" : undefined}
+              className={`site-nav-item ${
+                activeSection === id ? "is-active" : ""
               }`}
             >
               <Icon size={18} />
@@ -56,9 +83,14 @@ const Portfolio = () => {
             </button>
           ))}
         </nav>
+        </div>
       </header>
       <div className="flex-1 flex flex-col md:flex-row pt-16">
-        <SideBar personalInfo={personalInfo} setActiveSection={setActiveSection} />
+        <SideBar
+          personalInfo={personalInfo}
+          setActiveSection={setActiveSection}
+          mobileProfileOpen={profileOpen}
+        />
         <main className="flex-1 min-w-0 p-4 md:p-8">
           <div className="max-w-4xl mx-auto">
             {activeSection === "home" && <HomeSection personalInfo={personalInfo} />}

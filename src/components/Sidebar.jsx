@@ -1,9 +1,9 @@
 import React from "react";
 import { Mail, MapPin, Linkedin, Github, Briefcase } from "lucide-react";
 
-const SideBar = ({ personalInfo, setActiveSection }) => {
+const SideBar = ({ personalInfo, setActiveSection, mobileProfileOpen }) => {
   return (
-    <aside className="profile-sidebar w-64 bg-white shadow-xl flex flex-col items-center px-6 py-8 space-y-6 ml-10">
+    <aside className={`profile-sidebar ${mobileProfileOpen ? "is-mobile-open" : ""} w-64 bg-white shadow-xl flex flex-col items-center px-6 py-8 space-y-6 ml-10`}>
       {/* Profile Image Button */}
       <button
         onClick={() => setActiveSection("home")}
